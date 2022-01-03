@@ -1,0 +1,10 @@
+<h1> Je suis le component Start</h1>
+<strong> {{ nom }}</strong>
+
+<div [hidden]="hd" [style.backgroundColor]="color">Formation LA POSTE</div>
+
+<button class="btn btn-primary" (click)="showAlert()">Click me</button>
+
+<input [(ngModel)]="nom" type="text" class="form-control">
+
+<app-fils (msgToParent)="traitementDuParent($event)" [colorFils]="'grey'"></app-fils>
