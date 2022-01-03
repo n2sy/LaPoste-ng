@@ -1,5 +1,5 @@
 <ol>
-    <app-item (msgToList)="sendMsgToCv($event)" [onePerson]="listPersonnes[0]"></app-item>
-    <app-item (msgToList)="sendMsgToCv($event)" [onePerson]="listPersonnes[1]"></app-item>
-    <app-item (msgToList)="sendMsgToCv($event)" [onePerson]="listPersonnes[2]"></app-item>
+    <app-item *ngFor="let p of listPersonnes" (msgToList)="sendMsgToCv($event)" [onePerson]="p"></app-item>
+    <!-- <app-item (msgToList)="sendMsgToCv($event)" [onePerson]="listPersonnes[1]"></app-item>
+    <app-item (msgToList)="sendMsgToCv($event)" [onePerson]="listPersonnes[2]"></app-item> -->
 </ol>
