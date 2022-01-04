@@ -1,0 +1,13 @@
+<div>
+    <label for="name">Account Name</label>
+    <input #in type="text" id="name" class="form-control">
+
+    <label for="status"></label>
+    <select #sel id="status" class="form-control">
+        <option *ngFor="let s of AllStatus" [value]="s">{{ s }} </option>
+        <!-- <option value="active">active</option>
+        <option value="inactive">inactive</option>
+        <option value="unknown">unknown </option> -->
+    </select>
+    <button (click)="sendAccountToHome(in, sel)" class="btn btn-primary">Add Account</button>
+</div>

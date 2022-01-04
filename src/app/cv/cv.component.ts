@@ -12,18 +12,6 @@ export class CvComponent implements OnInit {
     new Personne(1, 'Jelassi', 'Nidhal', 38, 'Enseignant', 'nidhal.jpg'),
     new Personne(2, 'Simpson', 'Bart', 18, 'Eleve', 'bart.jpeg'),
     new Personne(3, 'Simpson', 'Homer', 58, 'Plombier', 'homer.jpg'),
-    new Personne(1, 'Jelassi', 'Nidhal', 38, 'Enseignant', 'nidhal.jpg'),
-    new Personne(2, 'Simpson', 'Bart', 18, 'Eleve', 'bart.jpeg'),
-    new Personne(3, 'Simpson', 'Homer', 58, 'Plombier', 'homer.jpg'),
-    new Personne(1, 'Jelassi', 'Nidhal', 38, 'Enseignant', 'nidhal.jpg'),
-    new Personne(2, 'Simpson', 'Bart', 18, 'Eleve', 'bart.jpeg'),
-    new Personne(3, 'Simpson', 'Homer', 58, 'Plombier', 'homer.jpg'),
-    new Personne(1, 'Jelassi', 'Nidhal', 38, 'Enseignant', 'nidhal.jpg'),
-    new Personne(2, 'Simpson', 'Bart', 18, 'Eleve', 'bart.jpeg'),
-    new Personne(3, 'Simpson', 'Homer', 58, 'Plombier', 'homer.jpg'),
-    new Personne(1, 'Jelassi', 'Nidhal', 38, 'Enseignant', 'nidhal.jpg'),
-    new Personne(2, 'Simpson', 'Bart', 18, 'Eleve', 'bart.jpeg'),
-    new Personne(3, 'Simpson', 'Homer', 58, 'Plombier', 'homer.jpg'),
   ];
   constructor() {}
 
