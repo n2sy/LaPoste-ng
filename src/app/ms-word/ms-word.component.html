@@ -1,0 +1,26 @@
+<div class="container">
+
+    <div [ngStyle]="
+    {
+        'backgroundColor' : bgColor,
+        'color' : textColor,
+        'fontSize' : fontsize,
+        'fontFamily' : fontf
+    }">
+        Formation avec La Poste Tunisienne
+    </div>
+
+    <label for="bgCl">Background Color</label>
+    <input [(ngModel)]="bgColor" type="text" class="form-control" id="bgCl">
+    <label for="txCl">Text Color</label>
+    <input [(ngModel)]="textColor" type="text" class="form-control" id="txCl">
+    <label for="size">Font Size</label>
+    <input #sz (change)="changeSize(sz.value)" type="number" class="form-control" id="size">
+
+    <label for="font">Font Family</label>
+    <select [(ngModel)]="fontf" id="font" class="form-control">
+        <option value="Futura">Futura</option>
+        <option value="Phosphate">Phosphate</option>
+        <option value="Arial">Arial</option>
+    </select>
+</div>
