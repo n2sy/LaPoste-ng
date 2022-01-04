@@ -6,8 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./manage-servers.component.css'],
 })
 export class ManageServersComponent implements OnInit {
-  selectedStatus;
-  listServers = [
+  selectedStatus = '';
+  listServers: {
+    name: string;
+    type: string;
+    status: string;
+    startDate: Date;
+  }[] = [
     {
       name: 'Production Server',
       type: 'small',
@@ -43,5 +48,14 @@ export class ManageServersComponent implements OnInit {
       'list-group-item-danger': stat == 'critical' ? true : false,
       'list-group-item-warning': stat == 'offline' ? true : false,
     };
+  }
+
+  addNewServer() {
+    this.listServers.push({
+      name: 'New Server',
+      type: 'small',
+      status: 'stable',
+      startDate: new Date(2020, 12, 12),
+    });
   }
 }
