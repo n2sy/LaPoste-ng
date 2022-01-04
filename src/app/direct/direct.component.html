@@ -7,9 +7,11 @@
 </div>
 
 <div [ngClass]="{
-    'c1' : false,
-    'c2' : false,
-    'c3' : true
+    'c1' : class1,
+    'c2' : class2,
+    'c3' : class3
 }">
     Exemple de NgClass
 </div>
+
+<button (click)="switchClass()" class="btn btn-danger">Switch Class</button>
