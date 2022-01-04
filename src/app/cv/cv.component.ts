@@ -9,9 +9,9 @@ import { Personne } from '../Models/personne';
 export class CvComponent implements OnInit {
   selectedPerson;
   tabPersonnes = [
-    new Personne(1, 'Jelassi', 'Nidhal', 38, 'Enseignant', 'nidhal.jpg'),
-    new Personne(2, 'Simpson', 'Bart', 18, 'Eleve', 'bart.jpeg'),
-    new Personne(3, 'Simpson', 'Homer', 58, 'Plombier', 'homer.jpg'),
+    new Personne(1, 'jelassi', 'Nidhal', 38, 'Enseignant', 'nidhal.jpg'),
+    new Personne(2, 'simpson', 'Bart', 18, 'Eleve', 'bart.jpeg'),
+    new Personne(3, 'simpson', 'Homer', 58, 'Plombier', 'homer.jpg'),
   ];
   constructor() {}
 
