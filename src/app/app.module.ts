@@ -22,6 +22,8 @@ import { FirstService } from './services/first.service';
 import { RecrueComponent } from './recrue/recrue.component';
 import { HomeComponent } from './home/home.component';
 import { POSTE_ROUTING } from './app.routing';
+import { NavbarComponent } from './navbar/navbar.component';
+import { InfosComponent } from './infos/infos.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { POSTE_ROUTING } from './app.routing';
     FilterPipe,
     RecrueComponent,
     HomeComponent,
+    NavbarComponent,
+    InfosComponent,
   ],
   imports: [FormsModule, BrowserModule, POSTE_ROUTING],
   providers: [FirstService],
