@@ -1,0 +1,15 @@
+<div class="container">
+    <label for="nom">Nom du serveur</label>
+    <input [(ngModel)]="servToEdit.nom" type="text" class="form-control" id="nom">
+
+    <label for="statut">Statut</label>
+    <select [(ngModel)]="servToEdit.statut" class="form-control" id="statut">
+        <option value="online">Online</option>
+        <option value="offline">Offline</option>
+    </select>
+
+    <br>
+    <button (click)="updateServ()" class="btn btn-success">Valider</button>
+
+
+</div>

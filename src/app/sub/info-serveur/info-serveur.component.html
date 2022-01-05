@@ -1,0 +1,8 @@
+<div class="container">
+    <strong> {{ myServ.nom }} </strong>
+    <p>Le statut du serveur est {{ myServ.statut }} </p>
+    <br><br>
+    <button (click)="goToEdit()" [disabled]="!isAllowed" class="btn btn-info">Editer</button>
+    <br>
+    <i *ngIf="!isAllowed">Impossible d'editer ce serveur !</i>
+</div>

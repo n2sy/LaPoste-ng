@@ -22,6 +22,11 @@ let myRoutes: Routes = [
   },
   { path: 'servers', component: ManageServersComponent },
   { path: 'ms-word', component: MsWordComponent },
+  {
+    path: 'serveurs',
+    loadChildren: () =>
+      import('../app/sub/sub.module').then((m) => m.SubModule),
+  },
   { path: 'not-found', component: NotFoundComponent },
   { path: '**', redirectTo: 'not-found' },
 ];
