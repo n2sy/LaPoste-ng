@@ -1,11 +1,11 @@
 <div class="container">
     <div class="row">
         <div class="col-md-5">
-            <app-liste (msgToCv)="traitementDuCV($event)"></app-liste>
+            <app-liste (msgToCv)="traitementDuCV($event)" [listPersonnes]="tabPersonnes"></app-liste>
         </div>
         <div class="col-md-7">
             <app-details [PersonSelected]="selectedPerson"></app-details>
         </div>
     </div>
-    <button (click)="addNewPerson()">Add New Person</button>
+
 </div>

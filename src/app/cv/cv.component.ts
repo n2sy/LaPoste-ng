@@ -21,9 +21,9 @@ export class CvComponent implements OnInit {
     this.selectedPerson = msg;
   }
 
-  addNewPerson() {
-    this.listPers.addPerson(
-      new Personne(1, 'New', 'Person', 38, 'Enseignant', 'nidhal.jpg')
-    );
-  }
+  // addNewPerson() {
+  //   this.listPers.addPerson(
+  //     new Personne(1, 'New', 'Person', 38, 'Enseignant', 'nidhal.jpg')
+  //   );
+  // }
 }

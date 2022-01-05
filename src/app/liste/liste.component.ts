@@ -9,14 +9,11 @@ import { ListPersonsService } from '../services/list-persons.service';
   providers: [ListPersonsService],
 })
 export class ListeComponent implements OnInit {
-  //@Input() listPersonnes: Personne[];
-  listPersonnes;
+  @Input() listPersonnes: Personne[];
   @Output() msgToCv = new EventEmitter();
   constructor(private listServ: ListPersonsService) {}
 
-  ngOnInit(): void {
-    this.listPersonnes = this.listServ.getAllPersons();
-  }
+  ngOnInit(): void {}
 
   sendMsgToCv(msg) {
     this.msgToCv.emit(msg);

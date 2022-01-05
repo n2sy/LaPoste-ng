@@ -19,6 +19,9 @@ import { CustomDirDirective } from './custom-dir.directive';
 import { ShortPipe } from './short.pipe';
 import { FilterPipe } from './filter.pipe';
 import { FirstService } from './services/first.service';
+import { RecrueComponent } from './recrue/recrue.component';
+import { HomeComponent } from './home/home.component';
+import { POSTE_ROUTING } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -38,8 +41,10 @@ import { FirstService } from './services/first.service';
     CustomDirDirective,
     ShortPipe,
     FilterPipe,
+    RecrueComponent,
+    HomeComponent,
   ],
-  imports: [FormsModule, BrowserModule],
+  imports: [FormsModule, BrowserModule, POSTE_ROUTING],
   providers: [FirstService],
   bootstrap: [AppComponent],
 })
