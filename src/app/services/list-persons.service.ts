@@ -19,4 +19,8 @@ export class ListPersonsService {
   addPerson(p) {
     this.tabPersonnes.push(p);
   }
+
+  getPersonById(id) {
+    return this.tabPersonnes.find((p) => p.id == id);
+  }
 }

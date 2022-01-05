@@ -24,6 +24,9 @@ import { HomeComponent } from './home/home.component';
 import { POSTE_ROUTING } from './app.routing';
 import { NavbarComponent } from './navbar/navbar.component';
 import { InfosComponent } from './infos/infos.component';
+import { EditComponent } from './edit/edit.component';
+import { AddComponent } from './add/add.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +50,9 @@ import { InfosComponent } from './infos/infos.component';
     HomeComponent,
     NavbarComponent,
     InfosComponent,
+    EditComponent,
+    AddComponent,
+    NotFoundComponent,
   ],
   imports: [FormsModule, BrowserModule, POSTE_ROUTING],
   providers: [FirstService],
