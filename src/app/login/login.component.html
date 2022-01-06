@@ -1,0 +1,29 @@
+<form #f="ngForm">
+
+    <div #infos="ngModelGroup" ngModelGroup="infos">
+        <label for="login">Login</label>
+        <input #login="ngModel" ngModel name="login" required email type="text" class="form-control" id="login">
+
+        <!-- <div *ngIf="login.invalid && login.touched" class="alert alert-danger">Votre adresse mail n'est pas valide</div> -->
+
+        <label for="mdp">Mot de passe</label>
+        <input ngModel required name="password" type="text" class="form-control" id="mdp">
+    </div>
+
+    <div *ngIf="infos.invalid && infos.touched" class="alert alert-danger">Email et/ou Mot de passe requis</div>
+
+
+
+    <br><br>
+
+    <label for="oper">Opérateur</label>
+    <select id="oper" class="form-control" [ngModel]="defaultEntreprise" name="operateur">
+        <option *ngFor="let ope of entreprises" [value]="ope">{{ope}}</option>
+    </select>
+
+    <label for="comm">Commentaires</label>
+    <input [(ngModel)]="myComment" type="text" class="form-control" id="comm" name="commentaire">
+    {{ myComment }}
+
+    <button [disabled]="f.invalid" (click)="showForm(f)" type='submit' class="btn btn-primary">Connect</button>
+</form>

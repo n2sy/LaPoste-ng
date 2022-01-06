@@ -7,20 +7,21 @@ import { InfosComponent } from './infos/infos.component';
 import { AddComponent } from './add/add.component';
 import { EditComponent } from './edit/edit.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { LoginComponent } from './login/login.component';
 
 let myRoutes: Routes = [
   { path: '', component: HomeComponent },
   {
     path: 'cv',
-    component: CvComponent,
     children: [
-      // { path: '', component: CvComponent },
+      { path: '', component: CvComponent },
       { path: 'add', component: AddComponent },
       { path: ':id', component: InfosComponent },
       { path: 'edit/:id', component: EditComponent },
     ],
   },
   { path: 'servers', component: ManageServersComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'ms-word', component: MsWordComponent },
   {
     path: 'serveurs',

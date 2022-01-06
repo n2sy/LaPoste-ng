@@ -28,6 +28,7 @@ import { EditComponent } from './edit/edit.component';
 import { AddComponent } from './add/add.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SubModule } from './sub/sub.module';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { SubModule } from './sub/sub.module';
     EditComponent,
     AddComponent,
     NotFoundComponent,
+    LoginComponent,
   ],
   imports: [FormsModule, BrowserModule, POSTE_ROUTING, SubModule],
   providers: [FirstService],
