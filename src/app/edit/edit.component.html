@@ -1,1 +1,22 @@
-<p>edit works!</p>
+<div class="container">
+    <form #f="ngForm" (ngSubmit)="updatePers()">
+        <label for="nom">Nom</label>
+        <input [(ngModel)]="pers.nom" required type="text" class="form-control" id="nom" name="nom">
+
+        <label for="prenom">Prénom</label>
+        <input [(ngModel)]="pers.prenom" required type="text" class="form-control" id="prenom" name="prenom">
+
+        <label for="age">Age</label>
+        <input [(ngModel)]="pers.age" type="number" class="form-control" id="age" name="age">
+
+        <label for="profession">Profession</label>
+        <input [(ngModel)]="pers.profession" type="text" class="form-control" id="profession" name="profession">
+
+        <label for="path">Url de l'avatar</label>
+        <input [(ngModel)]="pers.avatar" type="text" class="form-control" id="path" name="avatar">
+
+        <button [disabled]="f.invalid" class="btn btn-primary">
+            Mettre à jour
+        </button>
+    </form>
+</div>

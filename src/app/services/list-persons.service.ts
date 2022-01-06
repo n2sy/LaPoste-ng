@@ -17,10 +17,21 @@ export class ListPersonsService {
   constructor() {}
 
   addPerson(p) {
+    p.id = this.tabPersonnes[this.tabPersonnes.length - 1].id + 1;
     this.tabPersonnes.push(p);
   }
 
   getPersonById(id) {
     return this.tabPersonnes.find((p) => p.id == id);
+  }
+
+  deletePersonne(p) {
+    let i = this.tabPersonnes.indexOf(p);
+    this.tabPersonnes.splice(i, 1);
+  }
+
+  updatePersonne(p) {
+    let i = this.tabPersonnes.indexOf(p);
+    this.tabPersonnes[i] = p;
   }
 }
