@@ -18,4 +18,27 @@ export class LoginComponent implements OnInit {
   showForm(f) {
     console.log(f.value);
   }
+
+  effacerForm(f) {
+    f.reset();
+  }
+
+  generatePwd(f) {
+    f.setValue({
+      commentaire: '',
+      infos: {
+        login: '',
+        password: '123456',
+      },
+      operateur: '',
+    });
+  }
+
+  generatePwdII(f) {
+    f.form.patchValue({
+      infos: {
+        password: '123456',
+      },
+    });
+  }
 }

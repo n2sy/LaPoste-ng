@@ -1,4 +1,4 @@
-<form #f="ngForm">
+<form #f="ngForm" (ngSubmit)="showForm(f)">
 
     <div #infos="ngModelGroup" ngModelGroup="infos">
         <label for="login">Login</label>
@@ -24,6 +24,10 @@
     <label for="comm">Commentaires</label>
     <input [(ngModel)]="myComment" type="text" class="form-control" id="comm" name="commentaire">
     {{ myComment }}
-
-    <button [disabled]="f.invalid" (click)="showForm(f)" type='submit' class="btn btn-primary">Connect</button>
+    <br>
+    <button [disabled]="f.invalid" type='submit' class="btn btn-primary">Connect</button>
+    <br>
+    <button (click)="effacerForm(f)" class="btn btn-danger">Reset</button>
+    <button (click)="generatePwd(f)" class="btn btn-success">Generate Pwd</button>
+    <button (click)="generatePwdII(f)" class="btn btn-info">Generate Pwd II</button>
 </form>
