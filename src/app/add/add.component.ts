@@ -13,8 +13,14 @@ export class AddComponent implements OnInit {
   ngOnInit(): void {}
 
   addNewPerson(newP) {
-    console.log(newP);
-    this.persServ.addPerson(newP);
-    this.router.navigateByUrl('/cv');
+    // console.log(newP);
+    this.persServ.addPersonAPI(newP).subscribe(
+      (response) => {
+        this.router.navigateByUrl('/cv');
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 }

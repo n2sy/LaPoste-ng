@@ -16,13 +16,31 @@ export class EditComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.activRoute.paramMap.subscribe((p) => {
-      this.pers = this.persSer.getPersonById(p.get('id'));
-    });
+    this.activRoute.paramMap.subscribe(
+      (p) => {
+        this.persSer.getPersonByIdAPI(p.get('id')).subscribe(
+          (response) => {
+            this.pers = response;
+          },
+          (error) => {
+            console.log('Erreur avec getPersonById');
+          }
+        );
+      },
+      (error) => {
+        console.log('erreur avec paramMap');
+      }
+    );
   }
 
   updatePers() {
-    this.persSer.updatePersonne(this.pers);
-    this.router.navigateByUrl('/cv');
+    this.persSer.updatePersonneAPI(this.pers).subscribe(
+      (response) => {
+        this.router.navigateByUrl('/cv');
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 }

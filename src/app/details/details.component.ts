@@ -19,6 +19,6 @@ export class DetailsComponent implements OnInit {
   }
 
   goToInfos() {
-    this.router.navigate(['cv', this.PersonSelected.id]);
+    this.router.navigate(['cv', this.PersonSelected._id]);
   }
 }

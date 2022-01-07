@@ -30,6 +30,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { SubModule } from './sub/sub.module';
 import { LoginComponent } from './login/login.component';
 import { NoImagePipe } from './no-image.pipe';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpTestComponent } from './http-test/http-test.component';
+import { ExpObservableComponent } from './exp-observable/exp-observable.component';
 
 @NgModule({
   declarations: [
@@ -58,8 +61,16 @@ import { NoImagePipe } from './no-image.pipe';
     NotFoundComponent,
     LoginComponent,
     NoImagePipe,
+    HttpTestComponent,
+    ExpObservableComponent,
   ],
-  imports: [FormsModule, BrowserModule, POSTE_ROUTING, SubModule],
+  imports: [
+    FormsModule,
+    BrowserModule,
+    POSTE_ROUTING,
+    SubModule,
+    HttpClientModule,
+  ],
   providers: [FirstService],
   bootstrap: [AppComponent],
 })

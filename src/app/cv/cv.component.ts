@@ -10,11 +10,13 @@ import { ListPersonsService } from '../services/list-persons.service';
 })
 export class CvComponent implements OnInit {
   selectedPerson;
-  tabPersonnes = [];
+  tabPersonnes;
   constructor(private listPers: ListPersonsService) {}
 
   ngOnInit(): void {
-    this.tabPersonnes = this.listPers.getAllPersons();
+    this.listPers.getAllPersonsAPI().subscribe((response) => {
+      this.tabPersonnes = response;
+    });
   }
 
   traitementDuCV(msg) {

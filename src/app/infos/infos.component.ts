@@ -23,8 +23,14 @@ export class InfosComponent implements OnInit {
 
     // V2 avec paramMap
     this.activatedRoute.paramMap.subscribe((p: ParamMap) => {
-      this.pers = this.listPers.getPersonById(p.get('id'));
-      console.log(p.get('id'));
+      this.listPers.getPersonByIdAPI(p.get('id')).subscribe(
+        (response) => {
+          this.pers = response;
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
     });
 
     // V3 avec snapshot
@@ -34,12 +40,19 @@ export class InfosComponent implements OnInit {
 
   deletePerson() {
     if (confirm('Etes-vous sur de vouloir supprimer cette personne ?')) {
-      this.listPers.deletePersonne(this.pers);
-      this.router.navigateByUrl('/cv');
+      this.listPers.deletePersonneAPI(this.pers['_id']).subscribe(
+        (response) => {
+          console.log(response);
+          this.router.navigateByUrl('/cv');
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
     }
   }
 
   goToUpdate() {
-    this.router.navigate(['/cv', 'edit', this.pers.id]);
+    this.router.navigate(['/cv', 'edit', this.pers._id]);
   }
 }
