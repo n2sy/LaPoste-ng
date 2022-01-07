@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Personne } from '../Models/personne';
 
@@ -26,6 +26,24 @@ export class ListPersonsService {
   }
 
   addPersonAPI(p) {
+    // V1 avec HttpParams
+    // let token = localStorage.getItem('access_token');
+    // if (token) {
+    //   let params = new HttpParams().set('token', token);
+    //   //return this.http.post(this.link, p, {params : p1});
+    //   return this.http.post(this.link, p, {params});
+    // }
+
+    // return this.http.post(this.link, p);
+
+    // V2 avec HttpHeaders
+    // let token = localStorage.getItem('access_token');
+    // if (token) {
+    //   let h = new HttpHeaders().set('Authorization', `bearer ${token}`);
+    //   return this.http.post(this.link, p, { headers: h });
+    // }
+
+    // Avec interceptor
     return this.http.post(this.link, p);
   }
 

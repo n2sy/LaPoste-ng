@@ -14,8 +14,16 @@ export class CvComponent implements OnInit {
   constructor(private listPers: ListPersonsService) {}
 
   ngOnInit(): void {
-    this.listPers.getAllPersonsAPI().subscribe((response) => {
-      this.tabPersonnes = response;
+    this.listPers.getAllPersonsAPI().subscribe({
+      next: (response) => {
+        this.tabPersonnes = response;
+      },
+      error: (error) => {
+        console.log(error);
+      },
+      complete: () => {
+        //console.log('Flux terminé');
+      },
     });
   }
 

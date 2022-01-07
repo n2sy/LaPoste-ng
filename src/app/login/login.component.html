@@ -1,22 +1,24 @@
-<form #f="ngForm" (ngSubmit)="showForm(f)">
+<form #f="ngForm" (ngSubmit)="seConnecter(f)">
 
-    <div #infos="ngModelGroup" ngModelGroup="infos">
-        <label for="login">Login</label>
-        <input #login="ngModel" ngModel name="login" required email type="text" class="form-control" id="login">
+    <div *ngIf="erreur" class="alert alert-danger">Login et/ou Mot de passe invalide</div>
 
-        <!-- <div *ngIf="login.invalid && login.touched" class="alert alert-danger">Votre adresse mail n'est pas valide</div> -->
+    <!-- <div #infos="ngModelGroup" ngModelGroup="infos"> -->
+    <label for="login">Login</label>
+    <input #login="ngModel" ngModel name="email" required email type="text" class="form-control" id="login">
 
-        <label for="mdp">Mot de passe</label>
-        <input ngModel required name="password" type="text" class="form-control" id="mdp">
-    </div>
+    <!-- <div *ngIf="login.invalid && login.touched" class="alert alert-danger">Votre adresse mail n'est pas valide</div> -->
 
-    <div *ngIf="infos.invalid && infos.touched" class="alert alert-danger">Email et/ou Mot de passe requis</div>
+    <label for="mdp">Mot de passe</label>
+    <input ngModel required name="password" type="text" class="form-control" id="mdp">
+    <!-- </div>
+
+    <div *ngIf="infos.invalid && infos.touched" class="alert alert-danger">Email et/ou Mot de passe requis</div> -->
 
 
 
     <br><br>
 
-    <label for="oper">Opérateur</label>
+    <!-- <label for="oper">Opérateur</label>
     <select id="oper" class="form-control" [ngModel]="defaultEntreprise" name="operateur">
         <option *ngFor="let ope of entreprises" [value]="ope">{{ope}}</option>
     </select>
@@ -24,10 +26,10 @@
     <label for="comm">Commentaires</label>
     <input [(ngModel)]="myComment" type="text" class="form-control" id="comm" name="commentaire">
     {{ myComment }}
-    <br>
+    <br> -->
     <button [disabled]="f.invalid" type='submit' class="btn btn-primary">Connect</button>
-    <br>
+    <!-- <br>
     <button (click)="effacerForm(f)" class="btn btn-danger">Reset</button>
     <button (click)="generatePwd(f)" class="btn btn-success">Generate Pwd</button>
-    <button (click)="generatePwdII(f)" class="btn btn-info">Generate Pwd II</button>
+    <button (click)="generatePwdII(f)" class="btn btn-info">Generate Pwd II</button> -->
 </form>

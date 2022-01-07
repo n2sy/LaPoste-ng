@@ -33,6 +33,7 @@ import { NoImagePipe } from './no-image.pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpTestComponent } from './http-test/http-test.component';
 import { ExpObservableComponent } from './exp-observable/exp-observable.component';
+import { login_interceptor } from './token-inter.interceptor';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,7 @@ import { ExpObservableComponent } from './exp-observable/exp-observable.componen
     SubModule,
     HttpClientModule,
   ],
-  providers: [FirstService],
+  providers: [FirstService, login_interceptor],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
