@@ -1,0 +1,29 @@
+<div class="container">
+    <form [formGroup]="loginForm" (ngSubmit)="showForm()">
+        <div formGroupName="credentials">
+            Email : <br>
+            <input formControlName="login" type="text" class="form-control">
+
+            <!-- <div *ngIf="loginForm.get('login').invalid && loginForm.get('login').touched" class="alert alert-danger">Adresse
+                mail non
+                valide</div> -->
+            Password : <br>
+            <input formControlName="password" type="text" class="form-control">
+            <div *ngIf="loginForm.get('credentials').get('password').invalid" class="alert alert-danger">Wrong Password
+            </div>
+
+        </div>
+
+        Tel : <br>
+        <input formControlName="telephone" type="text" class="form-control">
+
+        <!-- <div *ngIf="loginForm.get('login').invalid && loginForm.get('login').touched" class="alert alert-danger">Adresse
+            mail non
+            valide</div> -->
+        Adresse : <br>
+        <input formControlName="adresse" type="text" class="form-control">
+
+
+        <button type='submit'>Submit</button>
+    </form>
+</div>

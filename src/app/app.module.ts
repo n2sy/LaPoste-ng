@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -34,6 +34,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpTestComponent } from './http-test/http-test.component';
 import { ExpObservableComponent } from './exp-observable/exp-observable.component';
 import { login_interceptor } from './token-inter.interceptor';
+import { ReactFormComponent } from './react-form/react-form.component';
 
 @NgModule({
   declarations: [
@@ -64,9 +65,11 @@ import { login_interceptor } from './token-inter.interceptor';
     NoImagePipe,
     HttpTestComponent,
     ExpObservableComponent,
+    ReactFormComponent,
   ],
   imports: [
     FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     POSTE_ROUTING,
     SubModule,
